@@ -1,0 +1,23 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "route": "customer",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "serviceBus",
+      "name": "topicQueue",
+      "topicName": "customer",
+      "connection": "azuresuperpowers_RootManageSharedAccessKey_SERVICEBUS",
+      "accessRights": "Send",
+      "direction": "out"
+    }
+  ]
+}
