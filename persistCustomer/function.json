@@ -7,7 +7,7 @@
       "direction": "in",
       "topicName": "customer",
       "subscriptionName": "persistCustomer",
-      "connection": "azuresuperpowers_RootManageSharedAccessKey_SERVICEBUS",
+      "connection": "SB",
       "accessRights": "Listen"
     }
   ]

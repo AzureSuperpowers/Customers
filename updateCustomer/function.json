@@ -15,7 +15,7 @@
       "type": "serviceBus",
       "name": "topicQueue",
       "topicName": "customer",
-      "connection": "azuresuperpowers_RootManageSharedAccessKey_SERVICEBUS",
+      "connection": "SB",
       "accessRights": "Send",
       "direction": "out"
     }
