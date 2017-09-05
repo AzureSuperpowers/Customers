@@ -10,7 +10,8 @@
 * Create Redis   
 * Create SQL  
     * Download a backup or sql script to generate the database [here](https://northwinddatabase.codeplex.com/releases/view/71634)  
-* Create Service Bus
+* Create Service Bus  
+    * Create Subscriptions for `cacheCustomer` and `persistCustomer`
 * Create Function App  
 * Configure Deployment  
 Under platform features, setup a new deployment pointing to this repository `https://github.com/AzureSuperpowers/Customers`  
