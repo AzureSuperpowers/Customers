@@ -1,10 +1,6 @@
-#r "Microsoft.WindowsAzure.Storage"
-using Microsoft.WindowsAzure.Storage.Table;
-
-public class Customer : TableEntity
+public class Customer
 {
     public long Id { get; set; }
-    public long LongId { get; set; }
     public string CompanyName { get; set; }
     public string Address { get; set; }
     public string City { get; set; }
@@ -24,8 +20,6 @@ public class Customer : TableEntity
             {
                 return new Customer
                 {
-                    PartitionKey = "Customer",
-                    RowKey = data?.RowKey,
                     CompanyName = data?.CompanyName,
                     Address = data?.Address,
                     City = data?.City,
@@ -35,8 +29,7 @@ public class Customer : TableEntity
                     Fax = data?.Fax,
                     Phone = data?.Phone,
                     PostalCode = data?.PostalCode,
-                    Region = data?.Region,
-                    ETag = "*"
+                    Region = data?.Region
                 };
             };
         }

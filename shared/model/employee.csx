@@ -1,7 +1,4 @@
-#r "Microsoft.WindowsAzure.Storage"
-using Microsoft.WindowsAzure.Storage.Table;
-
-public class Employee : TableEntity
+public class Employee
 {
     public string EmployeeID { get; set; }
     public string LastName { get; set; }
@@ -26,10 +23,7 @@ public class Employee : TableEntity
     {
         get{
             return data => {
-                // dynamic data = await req.Content.ReadAsAsync<object>();
                 return new Employee{
-                    PartitionKey = "Employee",
-                    RowKey = data?.RowKey,
                     EmployeeID = data?.EmployeeID,
                     LastName = data?.LastName,
                     FirstName = data?.FirstName,
@@ -47,8 +41,7 @@ public class Employee : TableEntity
                     Photo = data?.Photo,
                     Notes = data?.Notes,
                     ReportsTo = data?.ReportsTo,
-                    PhotoPath = data?.PhotoPath,
-                    ETag = "*"
+                    PhotoPath = data?.PhotoPath
                 };
             };
         }        
